@@ -1,0 +1,41 @@
+{
+  "name": "browser-llm-mcp",
+  "version": "0.1.0",
+  "description": "A local MCP server that lets small-model agents use stronger logged-in browser LLMs through Playwright.",
+  "type": "module",
+  "bin": {
+    "browser-llm-mcp": "dist/server.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run",
+    "dev": "tsx src/server.ts"
+  },
+  "keywords": [
+    "mcp",
+    "playwright",
+    "browser",
+    "llm",
+    "chatgpt"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "playwright": "^1.59.1",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.2",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.2",
+    "vitest": "^4.1.4"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
