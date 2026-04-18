@@ -1,7 +1,29 @@
+# Dependencies
 node_modules/
+
+# Build output
 dist/
 coverage/
-.DS_Store
-.browser-llm-mcp/
+*.tsbuildinfo
+
+# Playwright and test artifacts
 test-results/
 playwright-report/
+
+# Local runtime state
+.browser-llm-mcp/
+.env
+.env.*
+!.env.example
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor and OS cruft
+.DS_Store
+.vscode/
+.idea/
+*.swp
+*.swo

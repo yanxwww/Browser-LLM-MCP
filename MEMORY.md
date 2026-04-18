@@ -10,6 +10,27 @@ This file is the project memory log. Keep it updated after each implementation r
 - Prefer behavior-level notes over long file inventories, unless a file path is needed to disambiguate a change.
 - If a command fails and affects the next step, record the failure and the resolution.
 
+## 2026-04-18 - Correct And Harden .gitignore
+
+Intent:
+
+- Keep local build/runtime noise out of Git without accidentally hiding real source files, tests, or project documentation.
+
+Changes:
+
+- Removed `tests/`, `MEMORY.md`, `ARCHITECTURE.md`, and `MANUAL_TEST.md` from `.gitignore` so future test and documentation changes remain visible to Git.
+- Grouped `.gitignore` by purpose for easier maintenance.
+- Added common Node/TypeScript and local-dev ignore patterns such as `*.tsbuildinfo`, `.env*`, log files, and editor directories.
+
+Verification:
+
+- Reviewed `git diff -- .gitignore`.
+- Checked tracked files under `tests/` and project docs to confirm they are intended repository content.
+
+Result:
+
+- `.gitignore` now ignores build artifacts and local state without suppressing real repository assets.
+
 ## 2026-04-18 - Prepare Repository For Cross-Platform GitHub Publishing
 
 Intent:
